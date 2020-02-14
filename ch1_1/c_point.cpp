@@ -42,7 +42,7 @@ void avg_course(float(*score)[STUDENT]) {
 				for (j=0;j<STUDENT;j++)
 				{
 					printf("%.1f ", *(score[i] + j));
-					s += *(score[i] + j);
+					s += *(score[i] + j);//
 
 				}
 				printf("\ts=%.1f,avg=%.1f\n", s, s / STUDENT);
