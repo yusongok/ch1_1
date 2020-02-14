@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #define  STUDENT 5
 #define  SCORE 6
@@ -40,11 +41,11 @@ void avg_course(float(*score)[STUDENT]) {
 				s = 0;
 				for (j=0;j<STUDENT;j++)
 				{
-					printf("%f ", *(score[i] + j));
+					printf("%.1f ", *(score[i] + j));
 					s += *(score[i] + j);
 
 				}
-				printf("\ts=%f,avg=%f\n", s, s / STUDENT);
+				printf("\ts=%.1f,avg=%.1f\n", s, s / STUDENT);
 			}
 		}
 	
@@ -59,7 +60,7 @@ void avg_score(float(*score)[STUDENT])
 		{
 			s += *(score[j] + i);
 		}
-		printf("%f ", s / SCORE);
+		printf("%.1f ", s / SCORE);
 	}
 
 }
